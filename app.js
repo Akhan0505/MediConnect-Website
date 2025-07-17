@@ -4,7 +4,7 @@
 let doctorsData = [];
 let filteredDoctors = [];
 let currentPage = 1;
-const itemsPerPage = 6;
+const itemsPerPage = 5;
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
