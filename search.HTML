@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FindMyDoctor - Home</title>
+  <title>FindMyDoctor - Search</title>
   <link rel="stylesheet" href="css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
+
+  <header>
     <div class="container">
       <h1>FindMyDoctor</h1>
       <nav>
@@ -20,32 +19,18 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
            <li><a href="thankyou.html">Confirmation</a></li>
-        </ul>    
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-left">
-      <h2>Your Trusted Doctor Finder</h2>
-      <p>Find the best Pakistani doctors by specialty, location, or experience. Empower your health choices.</p>
-      <a href="search.html" class="btn">Search Doctors</a>
-    </div>
-    <div class="hero-right">
-      <img src="IMAGE OF DOCTOR.webp" alt="Doctor" />
-    </div>
-  </section>
+  
+  <div class="search-bar">
+    <input type="text" placeholder="Search by name, specialty or city...">
+    <button>Search</button>
+  </div>
 
-  <!-- Search -->
-  <section class="floating-search">
-    <input type="text" placeholder="🔍 Search doctors by name, specialty or city..." />
-    <button onclick="window.location.href='search.html'">Search</button>
-  </section>
-
-  <!-- Doctors -->
- 
-  <section class="doctors-section">
+    <section class="doctors-section">
     <h2>Meet Our Doctors</h2>
     <div class="doctor-grid">
       <!-- Doctor Card Example -->
@@ -122,7 +107,9 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 FindMyDoctor. Designed with ❤️ in Pakistan.</p>
+    <p>&copy; 2025 FindMyDoctor. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
