@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - OlaDoc</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-stethoscope"></i>
+                <span>OlaDoc</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#specialties">Specialties</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Doctor Summary -->
+                <div class="doctor-summary">
+                    <div class="doctor-info">
+                        <div class="doctor-avatar">
+                            <img src="assets/images/default-doctor.jpg" alt="Doctor">
+                        </div>
+                        <div class="doctor-details">
+                            <h2 id="booking-doctor-name">Dr. Name</h2>
+                            <p id="booking-doctor-specialization">Specialization</p>
+                            <div class="consultation-fee">
+                                <span class="fee-label">Consultation Fee:</span>
+                                <span id="booking-doctor-price" class="fee-amount">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <div class="form-header">
+                        <h3>Book Your Appointment</h3>
+                        <p>Fill in your details to schedule a consultation</p>
+                    </div>
+
+                    <form id="booking-form" class="booking-form">
+                        <!-- Patient Information -->
+                        <div class="form-section">
+                            <h4>Patient Information</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-name">Full Name *</label>
+                                    <input type="text" id="patient-name" name="patient-name" required>
+                                    <span id="patient-name-error" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-email">Email *</label>
+                                    <input type="email" id="patient-email" name="patient-email" required>
+                                    <span id="patient-email-error" class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-phone">Phone Number *</label>
+                                    <input type="tel" id="patient-phone" name="patient-phone" required>
+                                    <span id="patient-phone-error" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-age">Age</label>
+                                    <input type="number" id="patient-age" name="patient-age" min="1" max="120">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Details -->
+                        <div class="form-section">
+                            <h4>Appointment Details</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="appointment-date">Preferred Date *</label>
+                                    <input type="date" id="appointment-date" name="appointment-date" required>
+                                    <span id="appointment-date-error" class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="consultation-type">Consultation Type</label>
+                                    <select id="consultation-type" name="consultation-type">
+                                        <option value="video">Video Consultation</option>
+                                        <option value="in-person">In-Person Visit</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Time Slots -->
+                        <div class="form-section">
+                            <h4>Available Time Slots *</h4>
+                            <div id="time-slots" class="time-slots">
+                                <!-- Time slots will be populated by JavaScript -->
+                            </div>
+                            <span id="time-slot-error" class="error-message"></span>
+                            <input type="hidden" id="selected-time" name="selected-time">
+                        </div>
+
+                        <!-- Symptoms -->
+                        <div class="form-section">
+                            <h4>Symptoms & Concerns</h4>
+                            <div class="form-group">
+                                <label for="symptoms">Describe your symptoms or concerns</label>
+                                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Please describe your symptoms, concerns, or reason for consultation..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-calendar-check"></i>
+                                Confirm Appointment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>OlaDoc</span>
+                    </div>
+                    <p>Your trusted healthcare partner for online consultations and appointments.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#specialties">Specialties</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> info@oladoc.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OlaDoc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="doctorsData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
