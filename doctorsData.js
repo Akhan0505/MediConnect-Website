@@ -885,7 +885,7 @@ export const doctors = [
         location: "Karachi",
         rating: 4.7,
         experience: 3,
-        image: "male.jpg", // Placeholder
+        image: "female.jpg", // Placeholder
         fees: 3000,
         availability: {
             "Monday": ["09:00 AM", "11:00 AM", "02:00 PM"],
