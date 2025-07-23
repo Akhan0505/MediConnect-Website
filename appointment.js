@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             doctorItem.innerHTML = `
                 <div class="avatar">
-                    <img src="${doctor.image}" alt="Dr. ${doctor.name}">
+                    <img src="${doctor.image}" alt="${doctor.name}">
                 </div>
                 <div class="doctor-info">
-                    <h4>Dr. ${doctor.name}</h4>
+                    <h4>${doctor.name}</h4>
                     <p>${doctor.specialty}${doctor.subspecialty ? ` (${doctor.subspecialty})` : ''} - ${doctor.location}</p>
                 </div>
             `;
@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedDoctor) {
             selectedDoctorInfo.innerHTML = `
                 <div class="avatar">
-                    <img src="${selectedDoctor.image}" alt="Dr. ${selectedDoctor.name}">
+                    <img src="${selectedDoctor.image}" alt="${selectedDoctor.name}">
                 </div>
                 <div class="info-text">
-                    <h4>Dr. ${selectedDoctor.name}</h4>
+                    <h4>${selectedDoctor.name}</h4>
                     <p>${selectedDoctor.specialty}${selectedDoctor.subspecialty ? ` (${selectedDoctor.subspecialty})` : ''} - ${selectedDoctor.location}</p>
                     <div class="rating">
                         <i class="fas fa-star"></i> ${selectedDoctor.rating}
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             console.log('Appointment Booking Details:', bookingDetails);
-            alert(`Appointment with Dr. ${selectedDoctor.name} on ${appointmentDateInput.value} at ${selectedTimeSlot} has been booked successfully!`);
+            alert(`Appointment with ${selectedDoctor.name} on ${appointmentDateInput.value} at ${selectedTimeSlot} has been booked successfully!`);
             
             // In a real application, you would send this data to a backend server
             // e.g., fetch('/api/book-appointment', { method: 'POST', body: JSON.stringify(bookingDetails) })
